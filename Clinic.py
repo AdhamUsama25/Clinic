@@ -58,7 +58,7 @@ def time_format(a_time):
     m = (a_time - h * 3600) // 60
     s = a_time - h * 3600 - m * 60
     if a_time >= 3600:
-        return f'{int(h)} hrs, {int(m)} mins, {str("{:.2f}".format(s))} secs'
+        return f'{int(h)} hrs, {int(m)} mins, {round(s, 2)} secs'
     elif a_time >= 60:
         return f'{int(m)} mins, {str("{:.2f}".format(s))} secs'
     else:
